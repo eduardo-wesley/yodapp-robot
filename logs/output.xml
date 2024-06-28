@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-06-11T10:52:33.754701" rpa="false" schemaversion="5">
+<suite id="s1" name="Caixa-Spinner" source="C:\QAx\projects\yodapp-robot\testes\caixa-spinner.robot">
+<test id="s1-t1" name="Deve realizar o cadastro" line="10">
+<kw name="Start session" owner="base-resouce">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-06-11T10:52:34.401036" elapsed="10.718822"/>
+</kw>
+<status status="PASS" start="2024-06-11T10:52:34.398036" elapsed="10.722822"/>
+</kw>
+<kw name="Open appication" owner="base-resouce">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>QAX</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-06-11T10:52:45.122860" elapsed="4.738990"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:49.864844" level="INFO">Clicking element '//*[@text="QAX"]'.</msg>
+<msg time="2024-06-11T10:52:50.607600" level="INFO">xpath criteria: //*[@text="QAX"]</msg>
+<arg>//*[@text="QAX"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:49.861850" elapsed="0.745750"/>
+</kw>
+<status status="PASS" start="2024-06-11T10:52:45.121856" elapsed="5.485744"/>
+</kw>
+<kw name="Main menu" owner="base-resouce">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-11T10:52:50.610752" level="INFO">${hambuguer} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hambuguer}</var>
+<arg>//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-11T10:52:50.609754" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:52.004128" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hambuguer}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-06-11T10:52:50.610752" elapsed="1.394373"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:52.006709" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2024-06-11T10:52:52.172877" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hambuguer}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:52.005125" elapsed="0.168751"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-11T10:52:52.174877" level="INFO">${menu_item} = //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<var>${menu_item}</var>
+<arg>//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${menu_test}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-11T10:52:52.173876" elapsed="0.001001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:53.233896" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<arg>${menu_item}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-06-11T10:52:52.174877" elapsed="1.059019"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:53.237402" level="INFO">Clicking element '//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]'.</msg>
+<msg time="2024-06-11T10:52:53.495212" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<arg>${menu_item}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:53.233896" elapsed="0.261316"/>
+</kw>
+<arg>Formulários</arg>
+<status status="PASS" start="2024-06-11T10:52:50.608747" elapsed="2.887989"/>
+</kw>
+<kw name="Go item" owner="base-resouce">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-11T10:52:53.499333" level="INFO">${clique_simples} = //*[@text="Cadastro"]</msg>
+<var>${clique_simples}</var>
+<arg>//*[@text="${click_start}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-11T10:52:53.498281" elapsed="0.001052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:54.500280" level="INFO">xpath criteria: //*[@text="Cadastro"]</msg>
+<arg>${clique_simples}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-06-11T10:52:53.499333" elapsed="1.000947"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:54.504301" level="INFO">Clicking element '//*[@text="Cadastro"]'.</msg>
+<msg time="2024-06-11T10:52:55.900559" level="INFO">xpath criteria: //*[@text="Cadastro"]</msg>
+<arg>${clique_simples}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:54.501289" elapsed="1.400268"/>
+</kw>
+<arg>Cadastro</arg>
+<status status="PASS" start="2024-06-11T10:52:53.496736" elapsed="2.404821"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:55.905537" level="INFO">Clicking element 'id=com.qaxperience.yodapp:id/spinnerJob'.</msg>
+<msg time="2024-06-11T10:52:56.041390" level="INFO">criteria is com.qaxperience.yodapp:id/spinnerJob</msg>
+<arg>id=com.qaxperience.yodapp:id/spinnerJob</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:55.902536" elapsed="0.138854"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>class=android.widget.ListView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-06-11T10:52:56.041913" elapsed="1.213829"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-06-11T10:52:57.259338" level="INFO">Clicking element '//android.widget.TextView[@text="Jedi"]'.</msg>
+<msg time="2024-06-11T10:52:58.095401" level="INFO">xpath criteria: //android.widget.TextView[@text="Jedi"]</msg>
+<arg>//android.widget.TextView[@text="Jedi"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-06-11T10:52:57.257398" elapsed="0.838003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T10:53:01.100097" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T10:52:58.095401" elapsed="3.004696"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-06-11T10:53:01.103103" elapsed="0.614554"/>
+</kw>
+<status status="PASS" start="2024-06-11T10:52:34.395977" elapsed="27.322684"/>
+</test>
+<status status="PASS" start="2024-06-11T10:52:33.758878" elapsed="27.962793"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Caixa-Spinner">Caixa-Spinner</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
